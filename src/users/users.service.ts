@@ -19,7 +19,7 @@ export class UsersService {
     return this.userModel.find({}, { _id: 1, name: 1, address: 1 });
   }
 
-  async findOne(id: string) {
+  async findOne(id: string): Promise<User> {
     return this.userModel.findById({ _id: id }).exec();
   }
 
@@ -27,7 +27,7 @@ export class UsersService {
     return `This action updates a #${id} user`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} user`;
+  async remove(id: string): Promise<any>  {
+   return this.userModel.deleteOne({_id:id})
   }
 }
