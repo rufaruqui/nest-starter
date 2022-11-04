@@ -12,7 +12,7 @@ async function bootstrap() {
     .setDescription('Collect all the fixed')
     .setVersion('1.0')
     .addServer('http://localhost:3000')
-    .addTag('mgh')
+    .addTag('MGS Api -- V1')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);

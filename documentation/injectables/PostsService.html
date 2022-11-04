@@ -40,7 +40,7 @@
 
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li >UsersService</li>
+  <li >PostsService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,7 +58,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/users/users.service.ts</code>
+            <code>src/posts/posts.service.ts</code>
         </p>
 
 
@@ -91,7 +91,6 @@
                                 <a href="#findOne" >findOne</a>
                             </li>
                             <li>
-                                    <span class="modifier">Async</span>
                                 <a href="#remove" >remove</a>
                             </li>
                             <li>
@@ -115,12 +114,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(userModel: <a href="../interfaces/User.html" target="_self">Model&lt;User&gt;</a>)</code>
+<code>constructor(postModel: <a href="../interfaces/Post.html" target="_self">Model&lt;Post&gt;</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/users/users.service.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/posts/posts.service.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -138,10 +137,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>userModel</td>
+                                                        <td>postModel</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../interfaces/User.html" target="_self" >Model&lt;User&gt;</a></code>
+                                                                        <code><a href="../interfaces/Post.html" target="_self" >Model&lt;Post&gt;</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -178,7 +177,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>create(createUserDto: <a href="../interfaces/User.html" target="_self">CreateUserDto</a>)</code>
+                    <code>create(createPostDto: <a href="../interfaces/Post.html" target="_self">CreatePostDto</a>)</code>
                 </td>
             </tr>
 
@@ -186,7 +185,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">src/users/users.service.ts:11</a></div>
+                            class="link-to-prism">src/posts/posts.service.ts:11</a></div>
                 </td>
             </tr>
 
@@ -207,9 +206,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>createUserDto</td>
+                                    <td>createPostDto</td>
                                     <td>
-                                                <code><a href="../interfaces/User.html" target="_self" >CreateUserDto</a></code>
+                                                <code><a href="../interfaces/Post.html" target="_self" >CreatePostDto</a></code>
                                     </td>
 
                                     <td>
@@ -224,7 +223,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/User.html" target="_self" >Promise&lt;User&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/Post.html" target="_self" >Promise&lt;Post&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -256,8 +255,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">src/users/users.service.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="15"
+                            class="link-to-prism">src/posts/posts.service.ts:15</a></div>
                 </td>
             </tr>
 
@@ -266,7 +265,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/User.html" target="_self" >Promise&lt;User[]&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/Post.html" target="_self" >Promise&lt;Post[]&gt;</a></code>
 
                     </div>
                 </td>
@@ -295,8 +294,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">src/users/users.service.ts:20</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="19"
+                            class="link-to-prism">src/posts/posts.service.ts:19</a></div>
                 </td>
             </tr>
 
@@ -334,7 +333,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/User.html" target="_self" >Promise&lt;User&gt;</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/Post.html" target="_self" >Promise&lt;Post&gt;</a></code>
 
                     </div>
                     <div class="io-description">
@@ -350,7 +349,6 @@
                 <td class="col-md-4">
                     <a name="remove"></a>
                     <span class="name">
-                        <span class="modifier">Async</span>
                         <span ><b>remove</b></span>
                         <a href="#remove"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -358,16 +356,15 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>remove(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+<code>remove(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">src/users/users.service.ts:28</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/posts/posts.service.ts:27</a></div>
                 </td>
             </tr>
 
@@ -405,7 +402,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                     <div class="io-description">
@@ -428,15 +425,15 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>update(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, updateUserDto: <a href="../interfaces/User.html" target="_self">UpdateUserDto</a>)</code>
+<code>update(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, updatePostDto: <a href="../interfaces/Post.html" target="_self">UpdatePostDto</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">src/users/users.service.ts:24</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/posts/posts.service.ts:23</a></div>
                 </td>
             </tr>
 
@@ -469,9 +466,9 @@
 
                                 </tr>
                                 <tr>
-                                    <td>updateUserDto</td>
+                                    <td>updatePostDto</td>
                                     <td>
-                                                <code><a href="../interfaces/User.html" target="_self" >UpdateUserDto</a></code>
+                                                <code><a href="../interfaces/Post.html" target="_self" >UpdatePostDto</a></code>
                                     </td>
 
                                     <td>
@@ -503,34 +500,33 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Inject, Injectable } from &#x27;@nestjs/common&#x27;;
-import { CreateUserDto } from &#x27;./dto/create-user.dto&#x27;;
-import { UpdateUserDto } from &#x27;./dto/update-user.dto&#x27;;
-import { User } from &#x27;./interfaces/user.interface&#x27;;
-import { Model } from &#x27;mongoose&#x27;;
+import { CreatePostDto } from &#x27;./dto/create-post.dto&#x27;;
+import { UpdatePostDto } from &#x27;./dto/update-post.dto&#x27;;
+import { Post } from &#x27;./entities/post.entity&#x27;;
+import {Model} from &#x27;mongoose&#x27;;
 
 @Injectable()
-export class UsersService {
-  constructor(@Inject(&#x27;USER_MODEL&#x27;) private readonly userModel: Model&lt;User&gt;) {}
+export class PostsService {
+  constructor(@Inject(&#x27;POST_MODEL&#x27;) private readonly postModel: Model&lt;Post&gt;){}
 
-  async create(createUserDto: CreateUserDto): Promise&lt;User&gt; {
-    const newUser &#x3D; this.userModel.create(createUserDto);
-    return newUser;
+  async create(createPostDto: CreatePostDto): Promise&lt;Post&gt; {
+    return this.postModel.create(createPostDto);
   }
 
-  async findAll(): Promise&lt;User[]&gt; {
-    return this.userModel.find({}, { _id: 1, name: 1, address: 1 });
+  async findAll(): Promise&lt;Post[]&gt; {
+    return  this.postModel.find({});
   }
 
-  async findOne(id: string): Promise&lt;User&gt; {
-    return this.userModel.findById({ _id: id }).exec();
+  async findOne(id: string):Promise&lt;Post&gt; {
+    return this.postModel.findOne({_id:id})
   }
 
-  update(id: number, updateUserDto: UpdateUserDto) {
-    return &#x60;This action updates a #${id} user&#x60;;
+  update(id: number, updatePostDto: UpdatePostDto) {
+    return &#x60;This action updates a #${id} post&#x60;;
   }
 
-  async remove(id: string): Promise&lt;any&gt;  {
-   return this.userModel.deleteOne({_id:id})
+  remove(id: string) {
+    return this.postModel.deleteOne({_id:id})
   }
 }
 </code></pre>
@@ -576,7 +572,7 @@ export class UsersService {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'UsersService.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'PostsService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

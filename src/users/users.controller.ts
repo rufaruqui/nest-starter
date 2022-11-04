@@ -17,8 +17,11 @@ import {
   ApiResponse,
   ApiTags,
 } from '@nestjs/swagger';
+import { UserSchema } from './schemas/user.schema';
 
 @Controller('users')
+@ApiTags('Users ~ Access to all operations on users.')
+
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 

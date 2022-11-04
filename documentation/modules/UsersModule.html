@@ -172,12 +172,14 @@
 import { UsersService } from &#x27;./users.service&#x27;;
 import { UsersController } from &#x27;./users.controller&#x27;;
 import { usersProviders } from &#x27;./users.providers&#x27;;
-import { DatabaseModule } from &#x27;src/database/database.module&#x27;;
+import { DatabaseModule } from &#x27;../database/database.module&#x27;;
 
 @Module({
   imports: [DatabaseModule],
   controllers: [UsersController],
-  providers: [UsersService, ...usersProviders],
+  providers: [UsersService, 
+              ...usersProviders,
+  ],
 })
 export class UsersModule {}
 </code></pre>
