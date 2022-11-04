@@ -10,7 +10,7 @@ async function bootstrap() {
   const config = new DocumentBuilder()
     .setTitle('The MGH Admin')
     .setDescription('Collect all the fixed')
-    .setVersion('1.0')
+    .setVersion('2.0')
     .addServer('http://localhost:3000')
     .addTag('MGS Api -- V1')
     .build();

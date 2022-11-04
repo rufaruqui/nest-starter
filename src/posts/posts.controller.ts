@@ -2,8 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { PostsService } from './posts.service';
 import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
-import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
-//import { AppService } from 'src/app.service';
+import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger'; 
 
 @Controller('posts')
 @ApiTags('Posts ~ Access to all operations on posts.')
@@ -36,13 +35,14 @@ export class PostsController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updatePostDto: UpdatePostDto) {
+  @ApiOperation({ summary: `Update the post with post with {id}` })
+  async update(@Param('id') id: string, @Body() updatePostDto: UpdatePostDto) {
     return this.postsService.update(+id, updatePostDto);
   }
 
   @Delete(':id')
   @ApiOperation({ summary: `Delete the post with {id} if available` })
-  remove(@Param('id') id: string) {
+  async remove(@Param('id') id: string) {
     return this.postsService.remove(id);
   }
 }

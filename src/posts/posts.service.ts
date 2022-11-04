@@ -20,11 +20,11 @@ export class PostsService {
     return this.postModel.findOne({_id:id})
   }
 
-  update(id: number, updatePostDto: UpdatePostDto) {
-    return `This action updates a #${id} post`;
+  async update(id: number, updatePostDto: UpdatePostDto) {
+    return this.postModel.updateOne(updatePostDto)
   }
 
-  remove(id: string) {
+  async remove(id: string) {
     return this.postModel.deleteOne({_id:id})
   }
 }
