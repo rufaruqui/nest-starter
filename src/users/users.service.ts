@@ -12,7 +12,7 @@ export class UsersService {
       }
 
     async findOne(query: CreateUserDto):Promise<IUser> {
-        console.log("service", query);
-        return this.userModel.findOne(query, {_id:0, __v:0})
+       // console.log("service", query);
+        return this.userModel.findOne(query, {__v:0}).exec();
       }
 }

@@ -7,6 +7,7 @@ declare const module: any;
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
+
   const config = new DocumentBuilder()
     .setTitle('The MGH Admin')
     .setDescription('Collect all the fixed')
@@ -14,6 +15,7 @@ async function bootstrap() {
     .addServer('http://localhost:3000')
     .addTag('MGS Api -- V1')
     .build();
+
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
 
@@ -26,4 +28,3 @@ async function bootstrap() {
 
 }
 bootstrap();
- 

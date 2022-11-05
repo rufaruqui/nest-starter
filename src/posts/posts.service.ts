@@ -13,18 +13,18 @@ export class PostsService {
   }
 
   async findAll(): Promise<Post[]> {
-    return  this.postModel.find({});
+    return  this.postModel.find({}).exec();
   }
 
   async findOne(id: string):Promise<Post> {
-    return this.postModel.findOne({_id:id})
+    return this.postModel.findOne({_id:id}).exec();
   }
 
   async update(id: number, updatePostDto: UpdatePostDto) {
-    return this.postModel.updateOne(updatePostDto)
+    return this.postModel.updateOne(updatePostDto).exec();
   }
 
   async remove(id: string) {
-    return this.postModel.deleteOne({_id:id})
+    return this.postModel.deleteOne({_id:id}).exec();
   }
 }

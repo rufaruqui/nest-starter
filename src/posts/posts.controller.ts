@@ -1,14 +1,16 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
 import { PostsService } from './posts.service';
 import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger'; 
+import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
 @Controller('posts')
+@UseGuards(JwtAuthGuard)
 @ApiTags('Posts ~ Access to all operations on posts.')
 export class PostsController {
   constructor(private readonly postsService: PostsService) {}
-
+ 
   @Post()
   @ApiOperation({ summary: 'Create a Post' })
   @ApiResponse({ status: 200, description: 'A post has been created' })
@@ -16,6 +18,7 @@ export class PostsController {
     return this.postsService.create(createPostDto);
   }
 
+ 
   @Get()
   @ApiOperation({ summary: 'Find all the posts' })
   @ApiResponse({ status: 200, description: 'All posts', type: 'Post[]' })
