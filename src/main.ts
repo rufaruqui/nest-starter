@@ -15,7 +15,7 @@ async function bootstrap() {
     .setDescription('Collect all the fixed')
     .setVersion('2.0')
     .addServer('http://localhost:3000')
-    .addTag('MGS Api -- V1')
+    .addTag('MGH Api -- V1')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
